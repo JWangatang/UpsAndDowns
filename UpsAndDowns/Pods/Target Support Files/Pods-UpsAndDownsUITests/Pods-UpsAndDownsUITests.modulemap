@@ -1,0 +1,6 @@
+framework module Pods_UpsAndDownsUITests {
+  umbrella header "Pods-UpsAndDownsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
