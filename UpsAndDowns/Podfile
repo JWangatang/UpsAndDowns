@@ -7,9 +7,6 @@ target 'UpsAndDowns' do
 
   # Pods for UpsAndDowns
   pod 'IGListKit'
-  pod 'FBSDKCoreKit'
-  pod 'FBSDKLoginKit'
-  pod 'FBSDKShareKit'
 
   target 'UpsAndDownsTests' do
     inherit! :search_paths

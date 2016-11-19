@@ -43,6 +43,7 @@
 		581572C8CBDCEE4B2E63B745 /* Pods_UpsAndDownsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UpsAndDownsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		633919631DDC1F3C00ABFF34 /* UpsAndDowns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpsAndDowns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		633919661DDC1F3C00ABFF34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		633919681DDC1F3C00ABFF34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6339196B1DDC1F3C00ABFF34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6339196D1DDC1F3C00ABFF34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		633919701DDC1F3C00ABFF34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,8 +54,6 @@
 		633919821DDC1F3C00ABFF34 /* UpsAndDownsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpsAndDownsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		633919861DDC1F3C00ABFF34 /* UpsAndDownsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpsAndDownsUITests.swift; sourceTree = "<group>"; };
 		633919881DDC1F3C00ABFF34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		633919DE1DDF7B5400ABFF34 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		633919E31DDF838F00ABFF34 /* UpsAndDowns.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UpsAndDowns.entitlements; sourceTree = "<group>"; };
 		646E01BCCDF5147733A692BA /* Pods-UpsAndDownsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpsAndDownsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UpsAndDownsTests/Pods-UpsAndDownsTests.release.xcconfig"; sourceTree = "<group>"; };
 		72E14FF7EE23268EC8F9D254 /* Pods_UpsAndDownsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UpsAndDownsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F72B6EB524CD6B1439C2225 /* Pods-UpsAndDownsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpsAndDownsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UpsAndDownsUITests/Pods-UpsAndDownsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,11 +114,8 @@
 		633919651DDC1F3C00ABFF34 /* UpsAndDowns */ = {
 			isa = PBXGroup;
 			children = (
-				633919E31DDF838F00ABFF34 /* UpsAndDowns.entitlements */,
-				633919E01DDF7B6D00ABFF34 /* Models */,
-				633919E11DDF7B7300ABFF34 /* Views */,
-				633919E21DDF7B8100ABFF34 /* Controllers */,
 				633919661DDC1F3C00ABFF34 /* AppDelegate.swift */,
+				633919681DDC1F3C00ABFF34 /* ViewController.swift */,
 				6339196A1DDC1F3C00ABFF34 /* Main.storyboard */,
 				6339196D1DDC1F3C00ABFF34 /* Assets.xcassets */,
 				6339196F1DDC1F3C00ABFF34 /* LaunchScreen.storyboard */,
@@ -144,28 +140,6 @@
 				633919881DDC1F3C00ABFF34 /* Info.plist */,
 			);
 			path = UpsAndDownsUITests;
-			sourceTree = "<group>";
-		};
-		633919E01DDF7B6D00ABFF34 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		633919E11DDF7B7300ABFF34 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		633919E21DDF7B8100ABFF34 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				633919DE1DDF7B5400ABFF34 /* HomeViewController.swift */,
-			);
-			name = Controllers;
 			sourceTree = "<group>";
 		};
 		65A94C35302F38DD95284D31 /* Pods */ = {
@@ -270,11 +244,6 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 97Q63CPWP2;
 						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.Keychain = {
-								enabled = 1;
-							};
-						};
 					};
 					633919761DDC1F3C00ABFF34 = {
 						CreatedOnToolsVersion = 8.1;
@@ -480,8 +449,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633919691DDC1F3C00ABFF34 /* ViewController.swift in Sources */,
 				633919671DDC1F3C00ABFF34 /* AppDelegate.swift in Sources */,
-				633919DF1DDF7B5400ABFF34 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,7 +601,6 @@
 			baseConfigurationReference = 3CBFB9E450BBA3F19647445E /* Pods-UpsAndDowns.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = UpsAndDowns/UpsAndDowns.entitlements;
 				DEVELOPMENT_TEAM = 97Q63CPWP2;
 				INFOPLIST_FILE = UpsAndDowns/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -647,7 +615,6 @@
 			baseConfigurationReference = FD20F4BFE1D34C9144C802A7 /* Pods-UpsAndDowns.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = UpsAndDowns/UpsAndDowns.entitlements;
 				DEVELOPMENT_TEAM = 97Q63CPWP2;
 				INFOPLIST_FILE = UpsAndDowns/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
