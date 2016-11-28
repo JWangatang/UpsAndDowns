@@ -21,9 +21,10 @@ class HomeViewController: UIViewController, FBSDKLoginButtonDelegate {
         loginButton.center = self.view.center
         self.view.addSubview(loginButton)
         
-        // add required app permissions
-        loginButton.readPermissions = ["public_profile"]
+        // required app permissions: https://developers.facebook.com/docs/facebook-login/permissions
+        loginButton.readPermissions = ["public_profile", "user_friends", "user_about_me", "user_posts"]
         loginButton.delegate = self
+        
     }
     
     override func didReceiveMemoryWarning() {
