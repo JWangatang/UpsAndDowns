@@ -74,7 +74,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="noI-Wo-gKw">
                         <barButtonItem key="rightBarButtonItem" image="nav_more_icon" id="VkP-eh-Xwo">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="handleMore:" destination="z9P-d9-2DR" id="HWO-Cj-ZkW"/>
                             </connections>

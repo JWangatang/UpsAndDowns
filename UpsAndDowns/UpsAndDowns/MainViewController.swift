@@ -59,7 +59,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         self.view.addSubview(self.collectionView)
         
         // NavigationController Customization
-//        self.navigationController?.view.backgroundColor = UIColor.green
         self.navigationController?.navigationItem.hidesBackButton = true
         self.navigationItem.hidesBackButton = true
         
