@@ -45,7 +45,6 @@ class TabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! TabBarCellCollectionViewCell
         
-//        cell.icon.image = UIImage.init(named: darkItems[indexPath.row])
         cell.label.text = items[indexPath.row]
         return cell
     }
