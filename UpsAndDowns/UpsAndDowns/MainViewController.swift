@@ -76,11 +76,38 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         // ViewControllers init
         for title in self.items {
             let storyBoard = self.storyboard!
-            let vc = storyBoard.instantiateViewController(withIdentifier: title)
-            self.addChildViewController(vc)
-            vc.view.frame = CGRect.init(x: 0, y: 0, width: self.view.bounds.width, height: (self.view.bounds.height - 44))
-            vc.didMove(toParentViewController: self)
-            self.views.append(vc.view)
+            if(title == "Emotion") {
+                let vc = storyBoard.instantiateViewController(withIdentifier: title) as! EmotionViewController
+                self.addChildViewController(vc)
+                vc.view.frame = CGRect.init(x: 0, y: 0, width: self.view.bounds.width, height: (self.view.bounds.height - 44))
+                vc.didMove(toParentViewController: self)
+                self.views.append(vc.view)
+
+            }
+            else if(title == "Language") {
+                let vc = storyBoard.instantiateViewController(withIdentifier: title) as! LanguageViewController
+                self.addChildViewController(vc)
+                vc.view.frame = CGRect.init(x: 0, y: 0, width: self.view.bounds.width, height: (self.view.bounds.height - 44))
+                vc.didMove(toParentViewController: self)
+                self.views.append(vc.view)
+
+            }
+            else if(title == "Tone") {
+                let vc = storyBoard.instantiateViewController(withIdentifier: title) as! ToneViewController
+                self.addChildViewController(vc)
+                vc.view.frame = CGRect.init(x: 0, y: 0, width: self.view.bounds.width, height: (self.view.bounds.height - 44))
+                vc.didMove(toParentViewController: self)
+                self.views.append(vc.view)
+
+            }
+            else if(title == "Profile") {
+                let vc = storyBoard.instantiateViewController(withIdentifier: title) as! ProfileViewController
+                self.addChildViewController(vc)
+                vc.view.frame = CGRect.init(x: 0, y: 0, width: self.view.bounds.width, height: (self.view.bounds.height - 44))
+                vc.didMove(toParentViewController: self)
+                self.views.append(vc.view)
+            }
+            
         }
         self.viewsAreInitialized = true
     }
