@@ -141,7 +141,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidLoad() {
         
         // set navigation title to current user's first name (from FacebookService)
-        self.title = "Temppp"
+        self.title = "Ups and Downs"
         self.navigationController?.navigationBar.titleTextAttributes = [
         NSFontAttributeName: UIFont(name: "BrandonText-Regular", size: 21)!
                 ]
