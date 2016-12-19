@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="woC-62-Zfy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="woC-62-Zfy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="905" y="987"/>
         </scene>
-        <!--View Controller-->
+        <!--Emotion View Controller-->
         <scene sceneID="hHr-JW-VpS">
             <objects>
-                <viewController storyboardIdentifier="Emotion" id="tBd-13-pXb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Emotion" id="tBd-13-pXb" customClass="EmotionViewController" customModule="UpsAndDowns" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XJJ-6g-7eO"/>
                         <viewControllerLayoutGuide type="bottom" id="gZI-ey-aNb"/>
@@ -103,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="2154" y="956"/>
         </scene>
-        <!--View Controller-->
+        <!--Language View Controller-->
         <scene sceneID="fJg-CX-KL5">
             <objects>
-                <viewController storyboardIdentifier="Language" id="bn9-YV-ycu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Language" id="bn9-YV-ycu" customClass="LanguageViewController" customModule="UpsAndDowns" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tzN-08-HAB"/>
                         <viewControllerLayoutGuide type="bottom" id="O0k-bb-G8O"/>
@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="2926" y="956"/>
         </scene>
-        <!--View Controller-->
+        <!--Tone View Controller-->
         <scene sceneID="xeM-bQ-Ynh">
             <objects>
-                <viewController storyboardIdentifier="Tone" id="iS1-k1-UUp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Tone" id="iS1-k1-UUp" customClass="ToneViewController" customModule="UpsAndDowns" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dGX-Gy-SOd"/>
                         <viewControllerLayoutGuide type="bottom" id="aJe-Xb-F0z"/>
@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="3724" y="956"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="2B5-WL-SPa">
             <objects>
-                <viewController storyboardIdentifier="Profile" id="wD9-2f-FEm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Profile" id="wD9-2f-FEm" customClass="ProfileViewController" customModule="UpsAndDowns" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dMV-xC-dbn"/>
                         <viewControllerLayoutGuide type="bottom" id="xJd-q2-elG"/>
