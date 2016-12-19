@@ -6,7 +6,7 @@ target 'UpsAndDowns' do
   use_frameworks!
 
   # Pods for UpsAndDowns
-  pod 'IGListKit'
+  pod 'IGListKit', :git => 'https://github.com/Instagram/IGListKit.git', :branch => 'master'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
   pod 'FBSDKShareKit'

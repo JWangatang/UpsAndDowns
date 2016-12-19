@@ -9,14 +9,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IGListKit/IGListMoveIndex.h>
+#import <IGListKit/IGListDiffable.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface IGListMoveIndex ()
-
-- (instancetype)initWithFrom:(NSUInteger)from to:(NSUInteger)to NS_DESIGNATED_INITIALIZER;
+/**
+ This category provides default `IGListDiffable` conformance for `NSNumber`.
+ */
+@interface NSNumber (IGListDiffable) <IGListDiffable>
 
 @end
-
-NS_ASSUME_NONNULL_END

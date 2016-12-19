@@ -9,8 +9,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSIndexSet (PrettyDescription)
+#import <IGListKit/IGListMoveIndex.h>
 
-- (NSString *)prettyDescription;
+NS_ASSUME_NONNULL_BEGIN
+
+@interface IGListMoveIndex ()
+
+- (instancetype)initWithFrom:(NSInteger)from to:(NSInteger)to NS_DESIGNATED_INITIALIZER;
 
 @end
+
+NS_ASSUME_NONNULL_END

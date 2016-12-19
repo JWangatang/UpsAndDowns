@@ -11,21 +11,31 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.16.1):
     - FBSDKCoreKit
-  - IGListKit (1.0.0)
+  - IGListKit (2.0.0)
 
 DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
-  - IGListKit
+  - IGListKit (from `https://github.com/Instagram/IGListKit.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  IGListKit:
+    :branch: master
+    :git: https://github.com/Instagram/IGListKit.git
+
+CHECKOUT OPTIONS:
+  IGListKit:
+    :commit: 4cc91a25c8b262953e4f2d8e5dc78ee15c6265b2
+    :git: https://github.com/Instagram/IGListKit.git
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   FBSDKCoreKit: 7a6baaed4a2b2a244ba253346713bdbc74df135b
   FBSDKLoginKit: 469a56cebe2e1ed62b1621d0b155970fd6aac2d8
   FBSDKShareKit: 53af0239b5bd2ebf191f32f75991245a208cc982
-  IGListKit: 3242c475fa77e2abf2d4de319703088008fbe9b9
+  IGListKit: 2bd0b80dd04a83c75276d71f87690ef106e2d958
 
-PODFILE CHECKSUM: 27fef4dd0668dd9b29ea413bfba6a643525863b3
+PODFILE CHECKSUM: 4e052f4e1d42636de8275e848bc77de13605585e
 
-COCOAPODS: 1.1.0.beta.1
+COCOAPODS: 1.1.1
