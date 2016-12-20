@@ -39,6 +39,7 @@
 		8A54F0EF1E08A011009E04D3 /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54F0EE1E08A011009E04D3 /* EmotionViewController.swift */; };
 		8A54F0F11E08A01B009E04D3 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54F0F01E08A01B009E04D3 /* LanguageViewController.swift */; };
 		8A54F0F31E08A035009E04D3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54F0F21E08A035009E04D3 /* ProfileViewController.swift */; };
+		8A54F0F51E08AEFB009E04D3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54F0F41E08AEFB009E04D3 /* SearchViewController.swift */; };
 		B7AF1173E3E090486A7BF61C /* Pods_UpsAndDownsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E14FF7EE23268EC8F9D254 /* Pods_UpsAndDownsUITests.framework */; };
 		F62B1C76FD603411E88095B6 /* Pods_UpsAndDownsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 581572C8CBDCEE4B2E63B745 /* Pods_UpsAndDownsTests.framework */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		8A54F0EE1E08A011009E04D3 /* EmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionViewController.swift; sourceTree = "<group>"; };
 		8A54F0F01E08A01B009E04D3 /* LanguageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		8A54F0F21E08A035009E04D3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8A54F0F41E08AEFB009E04D3 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9F72B6EB524CD6B1439C2225 /* Pods-UpsAndDownsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpsAndDownsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UpsAndDownsUITests/Pods-UpsAndDownsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B29FF2FF522B7A71ABFCE174 /* Pods-UpsAndDownsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpsAndDownsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UpsAndDownsUITests/Pods-UpsAndDownsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FD20F4BFE1D34C9144C802A7 /* Pods-UpsAndDowns.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpsAndDowns.release.xcconfig"; path = "Pods/Target Support Files/Pods-UpsAndDowns/Pods-UpsAndDowns.release.xcconfig"; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				8A54F0EE1E08A011009E04D3 /* EmotionViewController.swift */,
 				8A54F0F01E08A01B009E04D3 /* LanguageViewController.swift */,
 				8A54F0F21E08A035009E04D3 /* ProfileViewController.swift */,
+				8A54F0F41E08AEFB009E04D3 /* SearchViewController.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A54F0F51E08AEFB009E04D3 /* SearchViewController.swift in Sources */,
 				8A54F0EF1E08A011009E04D3 /* EmotionViewController.swift in Sources */,
 				630128221DEBC9F000CF6804 /* TabBar.swift in Sources */,
 				8A54F0ED1E089FFB009E04D3 /* ToneViewController.swift in Sources */,
