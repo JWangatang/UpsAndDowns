@@ -73,6 +73,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="noI-Wo-gKw">
+                        <barButtonItem key="leftBarButtonItem" image="iconmonstr-magnifier-6-12" id="wW7-v7-Esi">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="nav_more_icon" id="VkP-eh-Xwo">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -159,6 +162,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="iconmonstr-magnifier-6-12" width="12" height="12"/>
         <image name="nav_more_icon" width="2" height="9"/>
     </resources>
 </document>
