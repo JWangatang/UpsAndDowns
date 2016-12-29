@@ -36,6 +36,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <segue destination="woC-62-Zfy" kind="presentation" identifier="LoginSuccess" id="f2q-cr-BaB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,7 +47,7 @@
         <!--NavVC-->
         <scene sceneID="6ot-XM-d3H">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="woC-62-Zfy" customClass="NavVC" customModule="UpsAndDowns" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavVC" title="NavVC" automaticallyAdjustsScrollViewInsets="NO" id="woC-62-Zfy" customClass="NavVC" customModule="UpsAndDowns" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="MKW-kh-uGS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -292,4 +295,7 @@
         <image name="iconmonstr-magnifier-6-12" width="12" height="12"/>
         <image name="nav_more_icon" width="2" height="9"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="f2q-cr-BaB"/>
+    </inferredMetricsTieBreakers>
 </document>

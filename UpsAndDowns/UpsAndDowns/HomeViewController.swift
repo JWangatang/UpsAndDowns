@@ -16,6 +16,9 @@ class HomeViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if(FBSDKAccessToken.current() != nil) {
+            performSegue(withIdentifier: "LoginSuccess", sender: nil)
+        }
         
         loginButton = FBSDKLoginButton()
         loginButton.center = self.view.center
@@ -41,6 +44,7 @@ class HomeViewController: UIViewController, FBSDKLoginButtonDelegate {
             alertView.addAction(UIAlertAction(title: "Ok ", style: UIAlertActionStyle.default, handler: nil))
             self.present(alertView, animated: true, completion: nil)
         } else if(result.token != nil) {
+            performSegue(withIdentifier: "LoginSuccess", sender: nil)
             // successful login - change to segue to main view
             self.dismiss(animated: true, completion: nil)
         }
