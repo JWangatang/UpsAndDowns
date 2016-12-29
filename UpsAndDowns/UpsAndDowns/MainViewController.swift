@@ -156,6 +156,26 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         customization()
         didSelectItem(atIndex: 0)
         NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.hideBar(notification:)), name: NSNotification.Name("hide"), object: nil)
+        
+        //Attempt to get user posts:
+        var Requset : FBSDKGraphRequest
+        print("\(FBSDKAccessToken.current())")
+        
+        let acessToken = String(format:"%@", FBSDKAccessToken.current().tokenString) as String
+        print("\(acessToken)")
+        
+        let parameters1 = ["access_token":FBSDKAccessToken.current().tokenString]
+        Requset  = FBSDKGraphRequest(graphPath:"me/posts", parameters:parameters1, httpMethod:"GET")
+        Requset.start(completionHandler: { (connection, result, error) -> Void in
+            if ((error) != nil) {
+                print("Error: \(error)")
+            }
+            else {
+                print("fetched user: \(result)")
+                let dataDict = (result as! NSDictionary).object(forKey: "data")!
+                print(dataDict)
+            }
+        })
     }
     
     //MARK: CollectionView DataSources
