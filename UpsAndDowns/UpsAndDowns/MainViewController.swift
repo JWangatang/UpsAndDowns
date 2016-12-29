@@ -136,6 +136,11 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             self.settings.removeFromSuperview()
         }
     }
+    func logout(status: Bool) {
+        if(status == true) {
+            self.performSegue(withIdentifier: "logout", sender: nil)
+        }
+    }
    
     //MARK: View Controller lifecyle
     override func viewDidLoad() {

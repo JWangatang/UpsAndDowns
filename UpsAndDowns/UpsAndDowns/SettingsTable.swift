@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 protocol SettingsDelegate {
     func hideSettingsView(status : Bool)
+    func logout(status:Bool)
 }
 
 class Settings: UIView,  UITableViewDelegate, UITableViewDataSource {
@@ -71,7 +74,15 @@ class Settings: UIView,  UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        dismiss()
+        if(indexPath.row == 4) { //Logout
+            let loginManager = FBSDKLoginManager()
+            loginManager.logOut()
+            print("Logout")
+            self.delegate?.logout(status: true)
+        }
+        else {
+            dismiss()
+        }
     }
   
     //Inits
