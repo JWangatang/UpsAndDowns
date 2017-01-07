@@ -12,6 +12,7 @@ GIFs created with [LiceCap](http://i.imgur.com/wo8w5us.gif).
 - [IBM Watson Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html)
 - [IGListKit](https://github.com/Instagram/IGListKit)
 - [Facebook SDK](https://developers.facebook.com/docs/ios/)
+- [Firebase](https://firebase.google.com/)
 
 ## Contributors
 👌🏼 [David Michelson] (https://github.com/davidleemichelson), [Jonathan Wang](https://github.com/JWangatang) [Kelly Lampotang] (https://github.com/klampotang), [Suraya Shivji] (https://github.com/surayashivji)
