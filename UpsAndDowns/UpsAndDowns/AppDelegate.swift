@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var initialViewController :UIViewController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        print("App Delegate reached 2")
+
         
         //Initialize Firebase
         FIRApp.configure()
@@ -36,6 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        print("App Delegate reached 1")
         
         let handled : Bool = FBSDKApplicationDelegate.sharedInstance().application(
             app,

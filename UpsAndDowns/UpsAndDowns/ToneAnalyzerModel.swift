@@ -12,6 +12,7 @@ import ToneAnalyzerV3
 class ToneAnalyzerModel {
     
     static let sharedInstance = ToneAnalyzerModel()
+    let toneAnalyzer : ToneAnalyzer
     
     //Initializer for the model
     private init () {
@@ -19,22 +20,21 @@ class ToneAnalyzerModel {
         let password = "buyG80qtk4Bu"
         let version = "2017-01-06" // use today's date for the most recent version
         
-        let toneAnalyzer = ToneAnalyzer(username: username, password: password, version: version)
+        toneAnalyzer = ToneAnalyzer(username: username, password: password, version: version)
         
     }
     
-    /*
-    func getToneData (text: String) -> Dictionary {
-        let text = "your-input-text"
+    
+    func getToneData (text: String) {
+        
         let failure = { (error: Error) in print(error) }
+        
         toneAnalyzer.getTone(ofText: text, failure: failure) { tones in
             print(tones)
-            return tones
         }
-        return nil
         
     }
- */
+ 
     
     
 }

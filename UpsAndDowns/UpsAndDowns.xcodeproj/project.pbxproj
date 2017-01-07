@@ -48,8 +48,10 @@
 		8A91F2861E1585E000EE96FF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A91F2851E1585E000EE96FF /* FBSDKCoreKit.framework */; };
 		AB0CCDFB1E208F50007CA819 /* ToneAnalyzerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0CCDFA1E208F50007CA819 /* ToneAnalyzerModel.swift */; };
 		AB0CCDFD1E20AA43007CA819 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB0CCDFC1E20AA43007CA819 /* GoogleService-Info.plist */; };
-		AB0CCE051E20AE03007CA819 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0CCE031E20AE03007CA819 /* RestKit.framework */; };
-		AB0CCE061E20AE03007CA819 /* ToneAnalyzerV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0CCE041E20AE03007CA819 /* ToneAnalyzerV3.framework */; };
+		ABDF8C501E21A0D300873208 /* RestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB0CCE031E20AE03007CA819 /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ABDF8C581E21A10600873208 /* ToneAnalyzerV3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABDF8C561E21A10600873208 /* ToneAnalyzerV3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ABDF8C5B1E21A1C900873208 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0CCE031E20AE03007CA819 /* RestKit.framework */; };
+		ABDF8C5C1E21A1C900873208 /* ToneAnalyzerV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDF8C561E21A10600873208 /* ToneAnalyzerV3.framework */; };
 		B7AF1173E3E090486A7BF61C /* Pods_UpsAndDownsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E14FF7EE23268EC8F9D254 /* Pods_UpsAndDownsUITests.framework */; };
 		F62B1C76FD603411E88095B6 /* Pods_UpsAndDownsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 581572C8CBDCEE4B2E63B745 /* Pods_UpsAndDownsTests.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,21 @@
 			remoteInfo = UpsAndDowns;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ABDF8C511E21A0D300873208 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ABDF8C501E21A0D300873208 /* RestKit.framework in Embed Frameworks */,
+				ABDF8C581E21A10600873208 /* ToneAnalyzerV3.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		278703AD2A6908BB2B691D08 /* Pods-UpsAndDownsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpsAndDownsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UpsAndDownsTests/Pods-UpsAndDownsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +148,7 @@
 		AB0CCDFF1E20AC4E007CA819 /* ToneAnalyzerV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ToneAnalyzerV3.framework; path = "../../Watson Modules/Carthage/Build/iOS/ToneAnalyzerV3.framework"; sourceTree = "<group>"; };
 		AB0CCE031E20AE03007CA819 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
 		AB0CCE041E20AE03007CA819 /* ToneAnalyzerV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ToneAnalyzerV3.framework; path = Carthage/Build/iOS/ToneAnalyzerV3.framework; sourceTree = "<group>"; };
+		ABDF8C561E21A10600873208 /* ToneAnalyzerV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ToneAnalyzerV3.framework; path = Carthage/Build/iOS/ToneAnalyzerV3.framework; sourceTree = "<group>"; };
 		B29FF2FF522B7A71ABFCE174 /* Pods-UpsAndDownsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpsAndDownsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UpsAndDownsUITests/Pods-UpsAndDownsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FD20F4BFE1D34C9144C802A7 /* Pods-UpsAndDowns.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpsAndDowns.release.xcconfig"; path = "Pods/Target Support Files/Pods-UpsAndDowns/Pods-UpsAndDowns.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,8 +158,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB0CCE051E20AE03007CA819 /* RestKit.framework in Frameworks */,
-				AB0CCE061E20AE03007CA819 /* ToneAnalyzerV3.framework in Frameworks */,
+				ABDF8C5B1E21A1C900873208 /* RestKit.framework in Frameworks */,
+				ABDF8C5C1E21A1C900873208 /* ToneAnalyzerV3.framework in Frameworks */,
 				8A91F2861E1585E000EE96FF /* FBSDKCoreKit.framework in Frameworks */,
 				8A91F2841E1583FE00EE96FF /* FBSDKLoginKit.framework in Frameworks */,
 				0B65769BDCC9C75BC3440A30 /* Pods_UpsAndDowns.framework in Frameworks */,
@@ -170,6 +188,7 @@
 		6339195A1DDC1F3C00ABFF34 = {
 			isa = PBXGroup;
 			children = (
+				ABDF8C561E21A10600873208 /* ToneAnalyzerV3.framework */,
 				633919651DDC1F3C00ABFF34 /* UpsAndDowns */,
 				6339197A1DDC1F3C00ABFF34 /* UpsAndDownsTests */,
 				633919851DDC1F3C00ABFF34 /* UpsAndDownsUITests */,
@@ -236,11 +255,11 @@
 			isa = PBXGroup;
 			children = (
 				8A54F0EC1E089FFB009E04D3 /* ToneViewController.swift */,
-				AB0CCDFA1E208F50007CA819 /* ToneAnalyzerModel.swift */,
 				8A54F0EE1E08A011009E04D3 /* EmotionViewController.swift */,
 				8A54F0F01E08A01B009E04D3 /* LanguageViewController.swift */,
 				8A54F0F21E08A035009E04D3 /* ProfileViewController.swift */,
 				8A54F0F41E08AEFB009E04D3 /* SearchViewController.swift */,
+				AB0CCDFA1E208F50007CA819 /* ToneAnalyzerModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -336,6 +355,7 @@
 				DBE8B9F46227B76EE7E5E726 /* [CP] Embed Pods Frameworks */,
 				2CB896BC2B23AFDA4C7C0CE7 /* [CP] Copy Pods Resources */,
 				AB0CCE021E20ACBE007CA819 /* ShellScript */,
+				ABDF8C511E21A0D300873208 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -400,7 +420,7 @@
 				TargetAttributes = {
 					633919621DDC1F3C00ABFF34 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 97Q63CPWP2;
+						DevelopmentTeam = B8UFVTJ84Q;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -545,7 +565,7 @@
 		};
 		AB0CCE021E20ACBE007CA819 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -554,7 +574,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
@@ -813,7 +833,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UpsAndDowns/UpsAndDowns.entitlements;
-				DEVELOPMENT_TEAM = 97Q63CPWP2;
+				DEVELOPMENT_TEAM = B8UFVTJ84Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -834,7 +854,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UpsAndDowns/UpsAndDowns.entitlements;
-				DEVELOPMENT_TEAM = 97Q63CPWP2;
+				DEVELOPMENT_TEAM = B8UFVTJ84Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
