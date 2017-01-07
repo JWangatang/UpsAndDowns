@@ -47,6 +47,9 @@
 		8A91F2841E1583FE00EE96FF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A91F2831E1583FE00EE96FF /* FBSDKLoginKit.framework */; };
 		8A91F2861E1585E000EE96FF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A91F2851E1585E000EE96FF /* FBSDKCoreKit.framework */; };
 		AB0CCDFB1E208F50007CA819 /* ToneAnalyzerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0CCDFA1E208F50007CA819 /* ToneAnalyzerModel.swift */; };
+		AB0CCDFD1E20AA43007CA819 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB0CCDFC1E20AA43007CA819 /* GoogleService-Info.plist */; };
+		AB0CCE051E20AE03007CA819 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0CCE031E20AE03007CA819 /* RestKit.framework */; };
+		AB0CCE061E20AE03007CA819 /* ToneAnalyzerV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0CCE041E20AE03007CA819 /* ToneAnalyzerV3.framework */; };
 		B7AF1173E3E090486A7BF61C /* Pods_UpsAndDownsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E14FF7EE23268EC8F9D254 /* Pods_UpsAndDownsUITests.framework */; };
 		F62B1C76FD603411E88095B6 /* Pods_UpsAndDownsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 581572C8CBDCEE4B2E63B745 /* Pods_UpsAndDownsTests.framework */; };
 /* End PBXBuildFile section */
@@ -123,6 +126,11 @@
 		8A91F2871E1585F000EE96FF /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		9F72B6EB524CD6B1439C2225 /* Pods-UpsAndDownsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpsAndDownsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UpsAndDownsUITests/Pods-UpsAndDownsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB0CCDFA1E208F50007CA819 /* ToneAnalyzerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToneAnalyzerModel.swift; sourceTree = "<group>"; };
+		AB0CCDFC1E20AA43007CA819 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB0CCDFE1E20AC4E007CA819 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = "../../Watson Modules/Carthage/Build/iOS/RestKit.framework"; sourceTree = "<group>"; };
+		AB0CCDFF1E20AC4E007CA819 /* ToneAnalyzerV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ToneAnalyzerV3.framework; path = "../../Watson Modules/Carthage/Build/iOS/ToneAnalyzerV3.framework"; sourceTree = "<group>"; };
+		AB0CCE031E20AE03007CA819 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
+		AB0CCE041E20AE03007CA819 /* ToneAnalyzerV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ToneAnalyzerV3.framework; path = Carthage/Build/iOS/ToneAnalyzerV3.framework; sourceTree = "<group>"; };
 		B29FF2FF522B7A71ABFCE174 /* Pods-UpsAndDownsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpsAndDownsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UpsAndDownsUITests/Pods-UpsAndDownsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FD20F4BFE1D34C9144C802A7 /* Pods-UpsAndDowns.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpsAndDowns.release.xcconfig"; path = "Pods/Target Support Files/Pods-UpsAndDowns/Pods-UpsAndDowns.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +140,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB0CCE051E20AE03007CA819 /* RestKit.framework in Frameworks */,
+				AB0CCE061E20AE03007CA819 /* ToneAnalyzerV3.framework in Frameworks */,
 				8A91F2861E1585E000EE96FF /* FBSDKCoreKit.framework in Frameworks */,
 				8A91F2841E1583FE00EE96FF /* FBSDKLoginKit.framework in Frameworks */,
 				0B65769BDCC9C75BC3440A30 /* Pods_UpsAndDowns.framework in Frameworks */,
@@ -182,6 +192,7 @@
 		633919651DDC1F3C00ABFF34 /* UpsAndDowns */ = {
 			isa = PBXGroup;
 			children = (
+				AB0CCDFC1E20AA43007CA819 /* GoogleService-Info.plist */,
 				63D4AEDB1DE2CA1B0080C013 /* UpsAndDowns.entitlements */,
 				63F4EB391DE64E27001832F4 /* FacebookService.swift */,
 				63A800891DE7CCE400EC3BB7 /* ColorPalette.swift */,
@@ -298,6 +309,10 @@
 		A5A3897952FD61AF4D5B843F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB0CCE031E20AE03007CA819 /* RestKit.framework */,
+				AB0CCE041E20AE03007CA819 /* ToneAnalyzerV3.framework */,
+				AB0CCDFE1E20AC4E007CA819 /* RestKit.framework */,
+				AB0CCDFF1E20AC4E007CA819 /* ToneAnalyzerV3.framework */,
 				8A91F2851E1585E000EE96FF /* FBSDKCoreKit.framework */,
 				8A91F2831E1583FE00EE96FF /* FBSDKLoginKit.framework */,
 				4B5DA9CD0485E4B966DEF05B /* Pods_UpsAndDowns.framework */,
@@ -320,6 +335,7 @@
 				633919611DDC1F3C00ABFF34 /* Resources */,
 				DBE8B9F46227B76EE7E5E726 /* [CP] Embed Pods Frameworks */,
 				2CB896BC2B23AFDA4C7C0CE7 /* [CP] Copy Pods Resources */,
+				AB0CCE021E20ACBE007CA819 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -440,6 +456,7 @@
 				63F4EB361DE645E3001832F4 /* BTRegularItalic.otf in Resources */,
 				63F4EB351DE645E3001832F4 /* BTMediumItalic.otf in Resources */,
 				63F4EB321DE645E3001832F4 /* BTLight.otf in Resources */,
+				AB0CCDFD1E20AA43007CA819 /* GoogleService-Info.plist in Resources */,
 				6339196E1DDC1F3C00ABFF34 /* Assets.xcassets in Resources */,
 				6339196C1DDC1F3C00ABFF34 /* Main.storyboard in Resources */,
 				63F4EB331DE645E3001832F4 /* BTLightItalic.otf in Resources */,
@@ -525,6 +542,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UpsAndDownsTests/Pods-UpsAndDownsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		AB0CCE021E20ACBE007CA819 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ToneAnalyzerV3.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RestKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		DBE8B9F46227B76EE7E5E726 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -785,6 +817,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = UpsAndDowns/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -805,6 +838,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = UpsAndDowns/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

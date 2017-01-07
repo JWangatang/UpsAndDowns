@@ -21,14 +21,20 @@ class ToneAnalyzerModel {
         
         let toneAnalyzer = ToneAnalyzer(username: username, password: password, version: version)
         
+    }
+    
+    /*
+    func getToneData (text: String) -> Dictionary {
         let text = "your-input-text"
         let failure = { (error: Error) in print(error) }
         toneAnalyzer.getTone(ofText: text, failure: failure) { tones in
             print(tones)
+            return tones
         }
-    
-    
+        return nil
+        
     }
+ */
     
     
 }
