@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>370442767528-oau4k34q0p702m38osbjiaa4epogujf2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.370442767528-oau4k34q0p702m38osbjiaa4epogujf2</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC4Vcbwojvj57USqWasOAP2O7A00aXHJQU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>370442767528</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.surayashivji.UpsAndDowns</string>
+	<key>PROJECT_ID</key>
+	<string>upsanddowns-ec724</string>
+	<key>STORAGE_BUCKET</key>
+	<string>upsanddowns-ec724.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:370442767528:ios:7d33d0a949c5a98b</string>
+	<key>DATABASE_URL</key>
+	<string>https://upsanddowns-ec724.firebaseio.com</string>
+</dict>
+</plist>
