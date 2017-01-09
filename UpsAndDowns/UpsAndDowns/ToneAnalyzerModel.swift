@@ -13,6 +13,7 @@ class ToneAnalyzerModel {
     
     static let sharedInstance = ToneAnalyzerModel()
     let toneAnalyzer : ToneAnalyzer
+    private var toneAnalysis : ToneAnalysis?
     
     //Initializer for the model
     private init () {
@@ -21,20 +22,59 @@ class ToneAnalyzerModel {
         let version = "2017-01-06" // use today's date for the most recent version
         
         toneAnalyzer = ToneAnalyzer(username: username, password: password, version: version)
-        
+        toneAnalysis = nil
     }
     
     
-    func getToneData (text: String) {
+    func getToneAnalysis (text: String) {
         
-        let failure = { (error: Error) in print(error) }
-        
-        toneAnalyzer.getTone(ofText: text, failure: failure) { tones in
-            print(tones)
+        let failure = { (error: Error) in
+            self.toneAnalysis = nil
+            print(error)
         }
         
+        toneAnalyzer.getTone(ofText: text, failure: failure) { tones in
+            self.toneAnalysis = tones
+            print(tones)
+        }
     }
- 
     
+    func getEmotionTones (tones: ToneAnalysis) -> [String : Double] {
+        var emotionTones = [String : Double]()
+        for i in 0...tones.documentTone.count {
+            if(tones.documentTone[i].name == "Emotion Tone") {
+                for j in 0...tones.documentTone[i].tones.count {
+                    emotionTones[tones.documentTone[i].tones[j].name] = tones.documentTone[i].tones[j].score
+                }
+                break
+            }
+        }
+        return emotionTones
+    }
     
+    func getLanguageTones (tones: ToneAnalysis) -> [String : Double] {
+        var languageTones = [String : Double]()
+        for i in 0...tones.documentTone.count {
+            if(tones.documentTone[i].name == "Language Tone") {
+                for j in 0...tones.documentTone[i].tones.count {
+                    languageTones[tones.documentTone[i].tones[j].name] = tones.documentTone[i].tones[j].score
+                }
+                break
+            }
+        }
+        return languageTones
+    }
+    
+    func getSocialTones (tones: ToneAnalysis) -> [String : Double] {
+        var socialTones = [String : Double]()
+        for i in 0...tones.documentTone.count {
+            if(tones.documentTone[i].name == "Social Tone") {
+                for j in 0...tones.documentTone[i].tones.count {
+                    socialTones[tones.documentTone[i].tones[j].name] = tones.documentTone[i].tones[j].score
+                }
+                break
+            }
+        }
+        return socialTones
+    }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, SettingsDelegate, TabBarDelegate   {
     
@@ -174,8 +175,33 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                 print("fetched user: \(result)")
                 let dataDict = (result as! NSDictionary).object(forKey: "data")!
                 print(dataDict)
+                
+                //updateFirebaseWithPosts(posts: dataDict as! NSDictionary)
             }
         })
+    }
+    
+    func updateFirebaseWithPosts (posts: [String : String]) {
+        
+        let firebase = FIRDatabase.database().reference()
+        
+        firebase.observeSingleEvent(of: .value, with: { (snapshot) in
+                if (snapshot.hasChild(FBSDKProfile.current().userID)) {
+                    let postsInFirebase = snapshot.value as? NSDictionary
+                    
+                    for (key, value) in posts {
+                        if (postsInFirebase?[key] == nil) {
+                            firebase.child(FBSDKProfile.current().userID).child(key).setValue(value)
+                        }
+                    }
+                }
+                else {
+                    firebase.child(FBSDKProfile.current().userID).setValue((posts))
+                }
+                
+            }) { (error) in
+                print(error.localizedDescription)
+        }
     }
     
     //MARK: CollectionView DataSources
