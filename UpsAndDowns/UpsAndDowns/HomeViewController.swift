@@ -46,7 +46,7 @@ class HomeViewController: UIViewController, FBSDKLoginButtonDelegate {
         } else if(result.token != nil) {
             performSegue(withIdentifier: "LoginSuccess", sender: nil)
             // successful login - change to segue to main view
-            self.dismiss(animated: true, completion: nil)
+            //self.dismiss(animated: true, completion: nil)
         }
     }
     
