@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import ToneAnalyzerV3
 
 class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, SettingsDelegate, TabBarDelegate   {
     
@@ -147,7 +148,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
    
     //MARK: View Controller lifecyle
     override func viewDidLoad() {
-        
         // set navigation title to current user's first name (from FacebookService)
         self.title = "Ups and Downs"
         self.navigationController?.navigationBar.titleTextAttributes = [
@@ -179,7 +179,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                 print(self.dataDict)
                 self.parsedFBPosts = self.parseFBPosts(dict: self.dataDict)
                 print("parsed posts: \(self.parsedFBPosts)")
-                //updateFirebaseWithPosts(posts: dataDict as! NSDictionary)
+                self.updateFirebaseWithPosts()
             }
         })
     }
@@ -187,7 +187,9 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         var fbPosts = [[String: (String, String)]]()
         for post in dict {
             if(post.object(forKey: "message") != nil) {
-                let date = post.object(forKey: "created_time") as! String
+                var date = post.object(forKey: "created_time") as! String
+                let index = date.index(date.startIndex, offsetBy: 10)
+                date = date.substring(to: index)
                 let id1 = post.object(forKey: "id") as! String
                 let message = post.object(forKey: "message") as! String
                 let dictionary1 : [String: (String, String)] = [id1 : (date , message )]
@@ -196,26 +198,83 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
         return fbPosts 
     }
-    func updateFirebaseWithPosts (posts: [String : String]) {
+    
+    func updateFirebaseWithPosts () {
         
         let firebase = FIRDatabase.database().reference()
         
         firebase.observeSingleEvent(of: .value, with: { (snapshot) in
-                if (snapshot.hasChild(FBSDKProfile.current().userID)) {
-                    let postsInFirebase = snapshot.value as? NSDictionary
-                    
-                    for (key, value) in posts {
-                        if (postsInFirebase?[key] == nil) {
-                            firebase.child(FBSDKProfile.current().userID).child(key).setValue(value)
+            //Check if the facebook user id exists in Firebase
+            
+            if (snapshot.hasChild(FBSDKAccessToken.current().userID)) {
+                print("Firebase already has this user.")
+                
+                //Snapshot of all the posts under the facebook user
+                let postsInFirebase = snapshot.childSnapshot(forPath: FBSDKAccessToken.current().userID)
+                //If the snapshot is not empty.
+                
+                    //check the most current posts from facebook and if it does not exist, then use TA and add to fb
+                for post in self.parsedFBPosts {
+                    for (key, value) in post {
+                        if (!postsInFirebase.hasChild(key)) {
+                            print("New post parsed!")
+                            //save date of post to firebase
+                            firebase.child(FBSDKAccessToken.current().userID).child(key).child("Date").setValue(value.0)
+                            //save message of post to firebase
+                            firebase.child(FBSDKAccessToken.current().userID).child(key).child("Message").setValue(value.1)
+                            
+                            //Tone Analyzer stuff here
+                            let username = "be1998e8-409d-4492-a4c3-525098ed9acb"
+                            let password = "buyG80qtk4Bu"
+                            let version = "2017-01-06" // use today's date for the most recent version
+                            
+                            let toneAnalyzer = ToneAnalyzer(username: username, password: password, version: version)
+                            let failure = { (error: Error) in
+                                print(error)
+                            }
+                            
+                            toneAnalyzer.getTone(ofText: value.1, failure: failure) { tones in
+                                for tone in tones.documentTone {
+                                    for attribute in tone.tones {
+                                        firebase.child(FBSDKAccessToken.current().userID).child(key).child(tone.name).child(attribute.name).setValue(attribute.score)
+                                    }
+                                }
+                            }
                         }
                     }
                 }
-                else {
-                    firebase.child(FBSDKProfile.current().userID).setValue((posts))
+            }
+            else {
+                for post in self.parsedFBPosts {
+                    for (key, value) in post {
+                        //save date of post to firebase
+                        firebase.child(FBSDKAccessToken.current().userID).child(key).child("Date").setValue(value.0)
+                        //save message of post to firebase
+                        firebase.child(FBSDKAccessToken.current().userID).child(key).child("Message").setValue(value.1)
+                        
+                        //Tone Analyzer stuff here
+                        let username = "be1998e8-409d-4492-a4c3-525098ed9acb"
+                        let password = "buyG80qtk4Bu"
+                        let version = "2017-01-06" // use today's date for the most recent version
+                        
+                        let toneAnalyzer = ToneAnalyzer(username: username, password: password, version: version)
+                        let failure = { (error: Error) in
+                            print(error)
+                        }
+                        
+                        toneAnalyzer.getTone(ofText: value.1, failure: failure) { tones in
+                            for tone in tones.documentTone {
+                                for attribute in tone.tones {
+                                    firebase.child(FBSDKAccessToken.current().userID).child(key).child(tone.name).child(attribute.name).setValue(attribute.score)
+                                }
+                            }
+                        }
+                    }
                 }
-                
-            }) { (error) in
-                print(error.localizedDescription)
+            }
+            
+        }) { (error) in
+            print(error.localizedDescription)
         }
     }
     
