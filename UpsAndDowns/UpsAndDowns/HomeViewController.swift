@@ -13,7 +13,6 @@ import FBSDKLoginKit
 class HomeViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     var loginButton : FBSDKLoginButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         if(FBSDKAccessToken.current() != nil) {

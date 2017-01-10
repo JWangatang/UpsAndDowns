@@ -12,6 +12,8 @@ import Firebase
 class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, SettingsDelegate, TabBarDelegate   {
     
     //MARK: Properties
+    var dataDict = [NSDictionary]()
+    var parsedFBPosts = [[String: (String, String)]]()
     var views = [UIView]()
     let items = ["Emotion", "Language", "Tone", "Profile"]
     var viewsAreInitialized = false
@@ -173,14 +175,27 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
             else {
                 print("fetched user: \(result)")
-                let dataDict = (result as! NSDictionary).object(forKey: "data")!
-                print(dataDict)
-                
+                self.dataDict = (result as! NSDictionary).object(forKey: "data")! as! [NSDictionary]
+                print(self.dataDict)
+                self.parsedFBPosts = self.parseFBPosts(dict: self.dataDict)
+                print("parsed posts: \(self.parsedFBPosts)")
                 //updateFirebaseWithPosts(posts: dataDict as! NSDictionary)
             }
         })
     }
-    
+    func parseFBPosts(dict: [NSDictionary]) -> [[String: (String, String)]]{
+        var fbPosts = [[String: (String, String)]]()
+        for post in dict {
+            if(post.object(forKey: "message") != nil) {
+                let date = post.object(forKey: "created_time") as! String
+                let id1 = post.object(forKey: "id") as! String
+                let message = post.object(forKey: "message") as! String
+                let dictionary1 : [String: (String, String)] = [id1 : (date , message )]
+                fbPosts.append(dictionary1)
+            }
+        }
+        return fbPosts 
+    }
     func updateFirebaseWithPosts (posts: [String : String]) {
         
         let firebase = FIRDatabase.database().reference()
