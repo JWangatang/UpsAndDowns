@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import ToneAnalyzerV3
+import MBProgressHUD
 
 class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, SettingsDelegate, TabBarDelegate   {
     
@@ -174,12 +175,14 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                 print("Error: \(error)")
             }
             else {
+                MBProgressHUD.showAdded(to: self.view, animated: true)
                 print("fetched user: \(result)")
                 self.dataDict = (result as! NSDictionary).object(forKey: "data")! as! [NSDictionary]
                 print(self.dataDict)
                 self.parsedFBPosts = self.parseFBPosts(dict: self.dataDict)
                 print("parsed posts: \(self.parsedFBPosts)")
                 self.updateFirebaseWithPosts()
+                MBProgressHUD.hide(for: self.view, animated: true)
             }
         })
     }
