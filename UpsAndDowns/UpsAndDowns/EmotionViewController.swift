@@ -52,6 +52,8 @@ class EmotionViewController: UIViewController, UITableViewDelegate, UITableViewD
         }) { (error) in
             print(error.localizedDescription)
         }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
