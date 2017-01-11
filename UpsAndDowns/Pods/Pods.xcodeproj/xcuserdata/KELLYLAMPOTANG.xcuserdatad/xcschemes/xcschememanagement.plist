@@ -8,41 +8,72 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>FBSDKCoreKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>FBSDKLoginKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>FBSDKShareKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>GTMSessionFetcher.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>IGListKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
 		</dict>
 		<key>Pods-UpsAndDowns.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>Pods-UpsAndDownsTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>9</integer>
 		</dict>
 		<key>Pods-UpsAndDownsUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>10</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -112,7 +143,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>C68B07994CB9C008D7683D50BB62A456</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D95215476334EB23C47AFEAD61099C6B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBA6001481CEA0EBA031CC5C94508FAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

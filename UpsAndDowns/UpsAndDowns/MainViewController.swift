@@ -17,7 +17,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     var dataDict = [NSDictionary]()
     var parsedFBPosts = [[String: (String, String)]]()
     var views = [UIView]()
-    let items = ["Emotion", "Language", "Tone", "Profile"]
+    let items = ["Emotion", "Language", "Social", "Profile"]
     var viewsAreInitialized = false
     lazy var collectionView: UICollectionView  = {
         let layout = UICollectionViewFlowLayout()
@@ -97,8 +97,8 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                 self.views.append(vc.view)
 
             }
-            else if(title == "Tone") {
-                let vc = storyBoard.instantiateViewController(withIdentifier: title) as! ToneViewController
+            else if(title == "Social") {
+                let vc = storyBoard.instantiateViewController(withIdentifier: title) as! SocialViewController
                 self.addChildViewController(vc)
                 vc.view.frame = CGRect.init(x: 0, y: 0, width: self.view.bounds.width, height: (self.view.bounds.height - 44))
                 vc.didMove(toParentViewController: self)
