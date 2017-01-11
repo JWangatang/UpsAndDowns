@@ -39,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-UpsAndDowns.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -102,7 +107,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E9150EB04783226823D7CE826F42A83C</key>
+		<key>C68B07994CB9C008D7683D50BB62A456</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBA6001481CEA0EBA031CC5C94508FAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
