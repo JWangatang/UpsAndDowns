@@ -49,7 +49,7 @@
             <objects>
                 <navigationController storyboardIdentifier="NavVC" title="NavVC" automaticallyAdjustsScrollViewInsets="NO" id="woC-62-Zfy" customClass="NavVC" customModule="UpsAndDowns" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="MKW-kh-uGS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="MKW-kh-uGS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -220,7 +220,7 @@
         <!--Social View Controller-->
         <scene sceneID="xeM-bQ-Ynh">
             <objects>
-                <viewController storyboardIdentifier="Tone" id="iS1-k1-UUp" customClass="SocialViewController" customModule="UpsAndDowns" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Social" id="iS1-k1-UUp" customClass="SocialViewController" customModule="UpsAndDowns" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dGX-Gy-SOd"/>
                         <viewControllerLayoutGuide type="bottom" id="aJe-Xb-F0z"/>
@@ -248,7 +248,7 @@
                         <color key="backgroundColor" red="0.63907568976894369" green="1" blue="0.63231489357169579" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="KbY-b2-CeL" id="DLU-cQ-VmV"/>
+                        <outlet property="tableView" destination="KbY-b2-CeL" id="gwc-ul-ttc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zO0-kl-XQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
