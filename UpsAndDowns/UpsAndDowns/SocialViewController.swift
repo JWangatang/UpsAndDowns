@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import MBProgressHUD
 
-class SocialViewController: UIViewController {
+class SocialViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     var messages = [SocialMessage]()
@@ -19,7 +19,8 @@ class SocialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getFirebaseData()
-
+        tableView.dataSource = self
+        tableView.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -49,11 +50,23 @@ class SocialViewController: UIViewController {
                     self.messages.append(message)
                     
                 }
+                self.tableView.reloadData()
             }
             MBProgressHUD.hide(for: self.view, animated: true)
         }) { (error) in
             print(error.localizedDescription)
         }
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ToneCell") as! ToneTableViewCell
+        cell.dateLabel.text = messages[indexPath.row].date
+        cell.messageLabel.text = messages[indexPath.row].message
+        cell.analysisLabel.text = "Agreeableness: \(messages[indexPath.row].agreeableness) | Emotional Range: \(messages[indexPath.row].emotionalRange) | Conscientiousness: \(messages[indexPath.row].conscientiousness) | Extraversion: \(messages[indexPath.row].extraversion) | Openness: \(messages[indexPath.row].openness)"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
     }
 
     
