@@ -10,6 +10,9 @@ import UIKit
 
 class ToneTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var analysisLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

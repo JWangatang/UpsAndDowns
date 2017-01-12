@@ -13,6 +13,7 @@ import MBProgressHUD
 
 class EmotionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    
     @IBOutlet weak var tableView: UITableView!
     
     var info:[AnyObject] = []
@@ -47,11 +48,17 @@ class EmotionViewController: UIViewController, UITableViewDelegate, UITableViewD
                     self.messages.append(message)
                     
                 }
+                print("Success pls!!!!")
+                self.tableView.reloadData()
             }
             MBProgressHUD.hide(for: self.view, animated: true)
+            self.tableView.reloadData()
+
         }) { (error) in
             print(error.localizedDescription)
         }
+        self.tableView.reloadData()
+
         
         
     }
@@ -62,13 +69,15 @@ class EmotionViewController: UIViewController, UITableViewDelegate, UITableViewD
     
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToneCell", for: indexPath) as! ToneTableViewCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EmotionCell", for: indexPath) as! EmotionTableViewCell
+        cell.dateLabel.text = "\(messages[indexPath.row].date)"
+        cell.messageLabel.text = messages[indexPath.row].message
+        cell.analysisLabel.text = "Anger: \(messages[indexPath.row].anger) | Disgust: \(messages[indexPath.row].disgust) | Fear: \(messages[indexPath.row].fear) | Joy: \(messages[indexPath.row].joy) | Sadness: \(messages[indexPath.row].sadness))"
         return cell
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return info.count
+        return messages.count
     }
 
 

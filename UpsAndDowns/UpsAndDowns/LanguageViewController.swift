@@ -46,6 +46,7 @@ class LanguageViewController: UIViewController, UITableViewDelegate, UITableView
                                                   tentative: ((data![key] as! NSDictionary)["Language Tone"] as! NSDictionary)["Tentative"] as! Double)
                     self.messages.append(message)
                 }
+                self.tableView.reloadData()
             }
             MBProgressHUD.hide(for: self.view, animated: true)
         }) { (error) in
@@ -53,16 +54,16 @@ class LanguageViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
 
-    
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToneCell", for: indexPath) as! ToneTableViewCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LanguageCell", for: indexPath) as! LanguageTableViewCell
+        cell.dateLabel.text = messages[indexPath.row].date
+        cell.messageLabel.text = messages[indexPath.row].message
+        cell.analysisLabel.text = "Confident: \(messages[indexPath.row].confident) | Analytical: \(messages[indexPath.row].analytical) | Tentative: \(messages[indexPath.row].tentative)"
         return cell
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return info.count
+        return messages.count
     }
 
 
