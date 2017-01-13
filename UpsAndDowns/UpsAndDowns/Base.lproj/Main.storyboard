@@ -167,7 +167,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="153" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5gn-So-A8g">
-                                <rect key="frame" x="0.0" y="156" width="375" height="511"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -209,6 +209,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="upsdowns" translatesAutoresizingMaskIntoConstraints="NO" id="Y5s-gA-80j">
+                                <rect key="frame" x="158" y="20" width="58" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.5723940310183131" green="0.91899901943680329" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -275,6 +279,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="faces" translatesAutoresizingMaskIntoConstraints="NO" id="I4e-Tk-upY">
+                                <rect key="frame" x="158" y="20" width="58" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.69034600802540746" blue="0.93954843643925856" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -341,6 +349,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="graph" translatesAutoresizingMaskIntoConstraints="NO" id="RAG-VS-34y">
+                                <rect key="frame" x="158" y="20" width="58" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.63907568976894369" green="1" blue="0.63231489357169579" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -393,6 +405,8 @@
     </scenes>
     <resources>
         <image name="Screen Shot 2017-01-12 at 6.31.23 PM" width="394" height="390"/>
+        <image name="faces" width="388" height="392"/>
+        <image name="graph" width="378" height="386"/>
         <image name="iconmonstr-magnifier-6-12" width="12" height="12"/>
         <image name="nav_more_icon" width="2" height="9"/>
         <image name="upsdowns" width="386" height="394"/>
