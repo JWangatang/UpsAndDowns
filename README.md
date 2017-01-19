@@ -4,7 +4,10 @@
 
 **UpsAndDowns** is an iOS app that analyzes your Facebook profile and generates your emotional timeline using IBM Waton's tone analyzer.
 
+Note: Current BlueMix account credentials have been deactivated. You will need to sign up for an account and enter your own credentials.
+
 ## Walkthroughs
+![alt tag](http://i.imgur.com/tmzkEaM.gifv)
 
 GIFs created with [LiceCap](http://i.imgur.com/wo8w5us.gif).
 
@@ -15,4 +18,4 @@ GIFs created with [LiceCap](http://i.imgur.com/wo8w5us.gif).
 - [Firebase](https://firebase.google.com/)
 
 ## Contributors
-👌🏼 [David Michelson] (https://github.com/davidleemichelson), [Jonathan Wang](https://github.com/JWangatang) [Kelly Lampotang] (https://github.com/klampotang), [Suraya Shivji] (https://github.com/surayashivji)
+👌🏼 [Jonathan Wang](https://github.com/JWangatang) [Kelly Lampotang] (https://github.com/klampotang), [Suraya Shivji] (https://github.com/surayashivji)
