@@ -7,7 +7,7 @@
 Note: Current BlueMix account credentials have been deactivated. You will need to sign up for an account and enter your own credentials.
 
 ## Walkthroughs
-![alt tag](http://i.imgur.com/tmzkEaM.gifv)
+![alt tag](https://i.imgur.com/tmzkEaM.gif)
 
 GIFs created with [LiceCap](http://i.imgur.com/wo8w5us.gif).
 
