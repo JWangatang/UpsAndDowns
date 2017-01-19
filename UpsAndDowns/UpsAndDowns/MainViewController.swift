@@ -227,8 +227,9 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                             firebase.child(FBSDKAccessToken.current().userID).child(key).child("Message").setValue(value.1)
                             
                             //Tone Analyzer stuff here
-                            let username = "be1998e8-409d-4492-a4c3-525098ed9acb"
-                            let password = "buyG80qtk4Bu"
+                            //Enter credentials here!!!
+                            let username = ""
+                            let password = ""
                             let version = "2017-01-06" // use today's date for the most recent version
                             
                             let toneAnalyzer = ToneAnalyzer(username: username, password: password, version: version)
@@ -256,8 +257,9 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                         firebase.child(FBSDKAccessToken.current().userID).child(key).child("Message").setValue(value.1)
                         
                         //Tone Analyzer stuff here
-                        let username = "be1998e8-409d-4492-a4c3-525098ed9acb"
-                        let password = "buyG80qtk4Bu"
+                        //Enter credentials here!!!
+                        let username = ""
+                        let password = ""
                         let version = "2017-01-06" // use today's date for the most recent version
                         
                         let toneAnalyzer = ToneAnalyzer(username: username, password: password, version: version)
