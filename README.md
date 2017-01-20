@@ -12,7 +12,7 @@ Output: Tone rating from 0 - 1 at the document level and sentence level.
 - Social Tendencies (Openness, Conscientiousness, Extraversion, Agreeableness, Emotional Range)
 ```
 
-[More information and demo here] (https://tone-analyzer-demo.mybluemix.net/)
+[More info and demo of Watson's ToneAnalyzer here] (https://tone-analyzer-demo.mybluemix.net/)
 
 Note: Current BlueMix account credentials have been deactivated. You will need to sign up for an account and enter your own credentials.
 
