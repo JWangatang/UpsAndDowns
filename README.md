@@ -19,7 +19,7 @@ Note: Current BlueMix account credentials have been deactivated. You will need t
 ## Walkthroughs
 ![alt tag](https://i.imgur.com/tmzkEaM.gif)
 
-GIFs created with [LiceCap](http://i.imgur.com/wo8w5us.gif).
+GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Credits
 - [IBM Watson Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html)
